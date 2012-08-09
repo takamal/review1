@@ -17,6 +17,7 @@ public class Person{
 
 		p2.setFirstname("充史");
 		p2.setLastname("和田");
+		p2.showName();
 		p1.showName();
 	}
 
@@ -43,7 +44,7 @@ public class Person{
 
 
 	public void showName(){
-		System.out.println("氏：" + lastname + "　" + "名：" + firstname);
+		System.out.println(Person.uji + "：" + this.lastname + "　" + Person.na + "：" + this.firstname);
 	}
 }
 
