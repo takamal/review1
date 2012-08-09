@@ -1,41 +1,46 @@
-packeage.review1;
+//package.review1;
 
-class Person{
+public class Person{
 
-public static String uji = "氏";		//クラス変数
-public static String na	= "名";
-public String firstname;			//インスタンス変数
-public String lastname;
+	public static String uji = "氏";		//クラス変数
+	public static String na	= "名";
+	public String firstname;			//インスタンス変数
+	public String lastname;
 
 	public static void main(String[] args){
-		this.setLastname("渡辺");
-		this.setFirstname("高志");
-		this.showName();
+		Person p1 = new Person();
+		Person p2 = new Person();
+		
+		p1.setFirstname("高志");
+		p1.setLastname("渡辺");
+		p1.showName();
 
-		this.setLastname("和田");
-		this.setFirstname("充史");
-		this.showName();
-
-		this.setLastname("渡辺");
-		this.setFirstname("高志");
-		this.showName();
-	} 
-
-	public String getFirstname(){
-		return firstname;
+		p2.setFirstname("充史");
+		p2.setLastname("和田");
+		p1.showName();
 	}
 
-	public void setFirstname(String se){
-		firstname = se;
+	
+	
+	
+	//こっからメソッド（動作の内容）群がはじまる
+	public void setFirstname(String fSt){
+		this.firstname = fSt;
+	}
+	
+	public String getFirstname(){
+		return this.firstname;
+	}
+	
+	
+	public void setLastname(String lSt){
+		this.lastname = lSt;
 	}
 	
 	public String getLastname(){
-		return lastname;
+		return this.lastname;
 	}
 
-	public void setLastname(String se){
-		lastname = se;
-	}
 
 	public void showName(){
 		System.out.println("氏：" + lastname + "　" + "名：" + firstname);
